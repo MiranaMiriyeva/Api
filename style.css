@@ -18,24 +18,75 @@
     display: none;
    
 }
+.update-details{
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000b4;
+    display: none;
+}
+
+
+
 .details button{
  position: absolute;
  right: 565px;
- top: 175px;
+ top: 75px;
  border-radius: 30%;
  background-color: red;
 }
-.modal-item{
+.buttonx{
+    position: absolute;
+    right: 565px;
+    top: 175px;
+    border-radius: 30%;
+    background-color: red;
+}
+
+
+.update-modal-item{
     width: 400px;
     height: 400px;
     padding: 30px;
     background-color: #fff; 
     border-radius: 10px;
 }
+#updatebutton{
+    margin-top: 10px;
+}
+
+.modal-item{
+    width: 400px;
+    height: 600px;
+    padding: 30px;
+    background-color: #fff; 
+    border-radius: 10px;
+}
 .modal-item h2{
 padding: 20px 0 20px 0;
+margin-bottom: 10px;
 background-color: gray;
 border-radius: 10px;
 display: flex;
 justify-content: center;
 }
+.update-modal-item h2{
+    padding: 20px 0 20px 0;
+    background-color: gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    }
+
+.user-image{
+margin: 5% 0 8% 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 150px;
+width: 150px;
+border: gray double 5px;
+border-radius: 50%;
+box-shadow: inset 1px 1px 30px black;
+    }
