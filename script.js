@@ -13,6 +13,7 @@ let lastNameElem = document.getElementById("lastname")
 let emailElem = document.getElementById("email")
 let phoneNumberElem = document.getElementById("phonenumber")
 let updateButtonElem = document.getElementById("updatebutton")
+let updateForm = document.querySelector(".update-Form")
 let url = "https://dummyjson.com/users"
 let id;
 userRender()
@@ -37,15 +38,21 @@ userRender()
      
     })
   }
- xElem.addEventListener("click",()=>{
+ xElem.addEventListener("click",(e)=>{
     detailElem.style.display = "none"
  }
  )
 
  function updateuser(id){
     updateDetailElem.style.display = "flex"
-   userNameElem.value = id.username
-   userRender()
+   fetch(url)
+    .then (res => res.json())
+    .then (data => {
+        userNameElem.value = data.username;
+
+ })
+ console.log("asdfghjkl")
+ userRender()
  }
 
  updateXElem.addEventListener("click",()=>{
@@ -53,12 +60,21 @@ userRender()
  }
  )
 
+function deleteUser(id) {
+    fetch(`${url}/${id}`,{
+    method: "DELETE",
+}).finally(() => {
+    userRender()
+    console.log(id)
+})
+}
+
 
  function userRender(){
-    fetch(url)
+fetch(url)
  .then (res => res.json())
  .then (data => {
-     console.log(data.users)
+    tbodyElem.innerHTML ="";
      data.users.forEach(element => {
         tbodyElem.innerHTML += `
           <tr>
