@@ -51,7 +51,7 @@ userRender()
         userNameElem.value = data.username;
 
  })
- console.log("asdfghjkl")
+
  userRender()
  }
 
@@ -85,9 +85,7 @@ fetch(url)
             <td>${element.lastName}</td>
             <td>${element.email}</td>
             <td>${element.phone}</td>
-            <td> 
-            <button class="btn btn-danger" onclick = "deleteUser(${element.id})">Delete</button>
-            <button class="btn btn-secondary"  onclick = "updateuser(${element.id})">Update</button></td>
+            <td>
           </tr> `
           id = element.id
      });
